@@ -11,6 +11,9 @@ gem 'rails', '5.0.0'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+# Use Devise for user authentication
+gem 'devise', '4.2.0'
+gem 'twitter-bootstrap-rails', '3.2.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -19,7 +22,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -29,16 +31,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-  gem 'bcrypt', '~> 3.1.7'
+  gem 'bcrypt', '3.1.11'
 
 # Use Font Awesome sass gem for adding icons
 gem 'font-awesome-sass', '4.6.2'
-
 gem 'will_paginate', '3.1.5'
 gem 'bootstrap-will_paginate', '0.0.10'
-
 gem 'bootstrap-sass', '~> 3.3.5'
-
 gem 'geocoder', '1.4.2'
 
 # Use Capistrano for deployment
@@ -63,6 +62,7 @@ end
 group :production do
   # Use the PostgreSQL gem for Heroku production servers
   gem 'pg', '0.18.4'
+  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
